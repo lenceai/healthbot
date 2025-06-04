@@ -1,0 +1,38 @@
+{
+  "model": {
+    "hidden_dim": 128,
+    "num_layers": 12,
+    "num_heads": 4,
+    "max_seq_len": 2048,
+    "rms_norm_eps": 1e-5,
+    "rope_theta": 10000.0,
+    "num_experts": 16,
+    "select_experts_per_token": 2,
+    "expert_output_dim": 256,
+    "shared_expert_output_dim": 256
+  },
+  "training": {
+    "learning_rate": 0.0003,
+    "batch_size": 16,
+    "num_epochs": 1000,
+    "block_size": 64,
+    "log_interval": 100,
+    "save_interval": 250,
+    "save_dir": "./checkpoints_large",
+    "device": null
+  },
+  "data": {
+    "training_text": "Facebook was founded in a dorm room at Harvard by Mark Zuckerberg and his roommates. What began as a small social experiment soon transformed into a global platform, connecting billions of people across the world. Over the years, it expanded beyond profiles and friend requests, introducing features like the News Feed, Messenger, and Marketplace."
+  },
+  "generation": {
+    "max_new_tokens": 100,
+    "temperature": 1.0,
+    "top_k": null,
+    "test_prompts": [
+      "Facebook ",
+      "Dorm rooms are ",
+      "The News ",
+      "Mark Zuckerberg "
+    ]
+  }
+} 
